@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" type="module"></script>
     <title>Pong</title>
@@ -12,10 +15,19 @@
     <div class="score_board">
         <div id="player_score">0</div>
         <div id="computer_score">0</div>
+        <div id="high_score">None</div>
     </div>
 
     <div class="ball" id="ball"></div>
     <div class="paddle left_paddle" id="player_paddle"></div>
     <div class="paddle right_paddle" id="computer_paddle"></div>
+    <div id="dialog" title="Pong-Game">
+        <form class="form_data" id="form">
+            <label for="name" id="labelName">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name ">
+            <p id="warning">Input should contain only letters and numerics</p>
+            <input type="submit" id="submit">
+        </form>
+    </div>
 </body>
 </html>

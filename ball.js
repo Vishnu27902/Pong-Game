@@ -1,5 +1,7 @@
-const INITIAL_SPEED = 0.025;
+const INITIAL_SPEED = 0.00001;
 const SPEED_INCREMENT = 0.00001;
+
+const audio = new Audio("./strike.mp3");
 
 export default class Ball {
     constructor(ballElement) {
@@ -24,16 +26,18 @@ export default class Ball {
     }
 
     update(modTime, paddleRect) {
-        this.x += this.coordinate.x * this.speed * modTime;
-        this.y += this.coordinate.y * this.speed * modTime;
-        this.speed += SPEED_INCREMENT * modTime;
+        this.x += this.coordinate.x + this.speed ;
+        this.y += this.coordinate.y + this.speed ;
+        this.speed += SPEED_INCREMENT;
         const rect = this.rect();
 
         if (rect.bottom >= window.innerHeight || rect.top <= 0) {
+            audio.play();
             this.coordinate.y *= -1;
         }
 
         if (paddleRect.some(element => isCollison(element, rect))) {
+            audio.play();
             this.coordinate.x *= -1;
         }
     }

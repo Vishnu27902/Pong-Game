@@ -63,6 +63,77 @@ body{
 }
 
 .score_board > :first-child{
-    text-align: right;
     border-right: .5vh solid var(--color);
+}
+
+.score_board > :last-child{
+    border-left: .5vh solid var(--color);
+}
+
+.ui-dialog.dialog{
+    border-radius: 10px;
+    font-family: Verdana, Arial, Tahoma, sans-serif;
+    font-size: .8em;
+    padding: 0;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px black;
+}
+
+.ui-dialog-titlebar-close{
+    display: none;
+}
+
+.ui-widget-content{
+    color: var(--color);
+    background: var(--bgcolor);
+}
+
+input[type=text]{
+    width: 78%;
+    margin-top: 5px;
+    display: inline;
+    border: 1px solid grey;
+    font-size: medium;
+    padding: 5px;
+}
+
+input:focus{
+    outline:none;
+}
+
+.ui-dialog-content #submit{
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    margin-right: 50%;
+    margin-left: 40%;
+    font-size: medium;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.ui-dialog-content #warning{
+    display: none;
+}
+
+
+.ui-dialog-content #labelName{
+    font-size: medium;
+}
+
+.ui-widget-header{
+    border: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 0;
+    text-align: center;
+    color: var(--color);
+    font-weight: 1000;
+    background: var(--bgcolor);
+}
+
+.ui-dialog .ui-dialog-titlebar{
+    padding: 0.1em 0.5em;
+    position: relative;
+    font-size: 1.25em;
 }
